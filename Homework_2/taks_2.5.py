@@ -1,4 +1,20 @@
-t = (2, 4) # Stworzenie krotki zawierającej int 2 i 4
-print(t[1]) #Ze wzlędu na to, że indeksy obietków zaczynają się od 0 do w krotce zawierającej 2 elementy możliwe argumenty to 0 lub 1 
-t.append(6) #Ponieważ krotki są obiektami niemodyfikowalnymi nie możliwe jest zastosowanie funkcji .append dodające obiekty. Możliwe jest jedynie dodawanie do list
-a, b = t ; print(a, b) #W tym przypadku krotka jest rozpakowywana poprzez przydzielenie zmiennych a i b do zawartości krotki
+S = "przykładowe zdanie z dużą ilością znaków"
+print(S)
+black_char = 0
+
+for char in S:
+    if not char.isspace():
+        black_char += 1
+
+print("Liczba znaków:", black_char)
+
+words_num = S.split()
+print("Słowa:" , words_num)
+print("Ilość słów:" , len(words_num))
+
+longest_word = max(words_num, key = len)
+
+print("Najdłuższe zdanie:", longest_word)
+
+print("Sortowanie po ilości znaków:", sorted(words_num, key = len))
+print("Sortowanie po leksograficzne:", sorted(words_num))
