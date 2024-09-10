@@ -1,0 +1,24 @@
+This python program is desing to extract specific data from .sp file (file from PerkinElmer LS 55 spectrofluorometer - can be read with notepad)  files located within a folder and its subdirectories and save the extracted information into an Excel file. 
+
+sample data folder - 20231017
+Sample strucuture of .sp file 
+.
+.
+.
+409.000000	159.936075 
+409.500000	158.493530 
+410.000000	155.398443 
+410.500000	154.389522 
+411.000000	149.857924 
+411.500000	143.499125 
+412.000000	135.977034 
+412.500000	133.844295 
+413.000000	133.751897 
+.
+.
+.
+Program processes each .sp file, extracting specific values of fluorescence associated with the lines starting with 410.000000 and 450.000000 (wavelenghts)
+The extracted data (folder name, file name, 410 value, and 450 value) is then organized into a pandas DataFrame.
+Then, the DataFrame is exported to an Excel file, which can be save at a chosen location with implementaton of GUI with Tkinter.
+
+
